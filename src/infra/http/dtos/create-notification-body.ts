@@ -9,5 +9,6 @@ export class CreateNotificationBody {
   @Length(5, 255)
   content: string;
 
+  @IsNotEmpty()
   category: string;
 }
