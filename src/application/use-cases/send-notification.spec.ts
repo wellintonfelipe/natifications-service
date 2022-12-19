@@ -1,5 +1,5 @@
-import { InMemoryNotificationsRepositiry } from '../../../test/repositories/in-memory-notifications-repository';
-import { SendNotification } from './send-notication';
+import { InMemoryNotificationsRepositiry } from '@test/repositories/in-memory-notifications-repository';
+import { SendNotification } from './send-notification';
 
 describe('Send notification', () => {
   it('should be able to send a notification. ', async () => {
@@ -11,7 +11,7 @@ describe('Send notification', () => {
       category: 'Social',
       recipientId: 'exemple-recipient-id',
     });
-    expect(notificationsRepository.notications).toHaveLength(1);
-    expect(notificationsRepository.notications[0]).toEqual(notification);
+    expect(notificationsRepository.notifications).toHaveLength(1);
+    expect(notificationsRepository.notifications[0]).toEqual(notification);
   });
 });
